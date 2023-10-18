@@ -17,29 +17,7 @@ HTML content creation is done
 Design of webserver workflow
 
 ## Step 3:
-``````
-from http.server import HTTPServer, BaseHTTPRequestHandler
-content = """
 
-<html>
-<head>
-</head>
-<body>
-<h1>Welcome</h1>
-</body>
-</html>
-"""
-class HelloHandler (BaseHTTPRequestHandler):
-    def do_GET (self):
-        self.send_response(200)
-        self.send_header('Content-type', 'text/html; charset=utf-8')
-        self.end_headers ()
-        self.wfile.write(content.encode())
-
-server_address = ('', 80)
-httpd = HTTPServer (server_address, HelloHandler)
-httpd.serve_forever()
-``````
 ## Step 4:
 
 Serving the HTML pages.
@@ -48,7 +26,35 @@ Serving the HTML pages.
 
 Testing the webserver
 # PROGRAM:
-Type your code here
+```
+from http.server import HTTPServer, BaseHTTPRequestHandler
+content = """
+
+content = """
+<html>
+<head>
+<title>Student Details</title>
+</head>
+<body>
+<h1>Name:Shivraj R</h1>
+<h1>Department:CSE(IOT)</h1>
+<h1>Reference Number:23013397<h1>
+</body>
+</html>
+"""
+
+class HelloHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html; charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+
+server_address = ('', 80)
+httpd = HTTPServer(server_address, HelloHandler)
+httpd.serve_forever()
+```
+
 # OUTPUT:
 ![Alt Text](images/webserver1.png)
 # RESULT:
