@@ -33,9 +33,10 @@ content = """
 content = """
 <html>
 <head>
-<title>Top Five Web Application Development Frameworks</title>
+<title>webservers</title>
 </head>
 <body>
+<h1>Top Five Web Apllication Development Framework</h1>
 <h1>1.Django</h1>
 <h2>2.MEAN Stack</h2>
 <h3>3.React<h3>
@@ -55,8 +56,10 @@ httpd = HTTPServer(server_address, HelloHandler)
 httpd.serve_forever()
 ```
 
+
 # OUTPUT:
-![Alt Text](images/webserver1.png)
+![webserver png](https://github.com/ShivrajRajasekaran/Web_server/assets/145742560/124fb10c-4415-46a0-b863-cda5f7a2c6b0)
+
 # RESULT:
 
 The program is executed succesfully
